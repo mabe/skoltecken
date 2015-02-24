@@ -10,8 +10,8 @@
 
   var words = [
     { key: 'avrunda', subject: 'matte', name: 'Avrunda, Avrundning', youtube: 'Ty9nEHq_SZo' },
-    { key: 'avstand', subject: 'matte', name: 'Avstånd', youtube: 'lnvy1gpZa7M' },
-    { key: 'kort', subject: 'matte', name: 'Kort, Kortare, Kortast', youtube: 'lnvy1gpZa7M' }
+    { key: 'avstand', subject: 'matte', name: 'Avstånd', youtube: 'ar39H_dm6a0' },
+    { key: 'kort', subject: 'matte', name: 'Kort, Kortare, Kortast', youtube: '3YOnS9ms3cM' }
   ];
 
   var Root = Backbone.View.extend({
