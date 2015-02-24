@@ -46,10 +46,13 @@
         var width = $(document.body).width(),
           aspectRatio = view.$iframe.height() / view.$iframe.width()
 
-        view.$iframe
-                .attr('src', 'http://www.youtube.com/embed/' + $(this).data('youtube'))
-                .attr('height', width * aspectRatio)
-                .attr('width', width);
+          if (width > 600) {
+            width = 600;
+          }
+
+        view.$iframe.attr('src', 'http://www.youtube.com/embed/' + $(this).data('youtube') + '?rel=0');
+        view.$iframe.attr('height', width * aspectRatio);
+        view.$iframe.attr('width', width);
       });
       view.$modal.on('show.bs.modal', function () {
       });
