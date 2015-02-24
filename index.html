@@ -25,7 +25,14 @@
           <% _.each(words, function(w) { %>
           <li class="word list-flex-item"><a class="link" data-youtube="<%= w.youtube %>" data-toggle="modal" data-target="#video-modal"><%= w.name %></a></li>
           <% }); %>
-          </ul><div id="video-modal" class="fade modal"><div class="modal-dialog"><div class="modal-content"><iframe class="youtube-player" type="text/html" width="640" height="385" src="" allowfullscreen frameborder="0"></iframe></div></div></div>
+          </ul>
+          <div id="video-modal" class="fade modal">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <iframe class="youtube-player" type="text/html" width="640" height="385" src="" allowfullscreen frameborder="0"></iframe>
+              </div>
+            </div>
+          </div>
         </script>
 
         <script type="text/html" id="view-school">

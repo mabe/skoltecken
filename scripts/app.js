@@ -42,8 +42,14 @@
       view.$modal = this.$el.filter('#video-modal');
       view.$iframe = this.$modal.find('iframe');
 
-      view.$el.on('click', '.link', function() {
-        view.$iframe.attr('src', 'http://www.youtube.com/embed/' + $(this).data('youtube'));
+      view.$el.on('click', '.link', function(e) {
+        var width = $(document.body).width(),
+          aspectRatio = view.$iframe.height() / view.$iframe.width()
+
+        view.$iframe
+                .attr('src', 'http://www.youtube.com/embed/' + $(this).data('youtube'))
+                .attr('height', width * aspectRatio)
+                .attr('width', width);
       });
       view.$modal.on('show.bs.modal', function () {
       });
