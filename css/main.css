@@ -110,7 +110,7 @@ body { padding: 10px; }
   flex-wrap: wrap;
   -webkit-align-items: center;
   align-items: center;
-  -webkit-flex-direction: row;
+  -webkit-justify-content: center;
   justify-content: center;
   width: 100%;
   height: 100%;
