@@ -38,7 +38,7 @@
       var view = this;
       var items = _.filter(words, function(w) { return w.subject === s; });
 
-      view.$el = $(this.template({ words: words }));
+      view.$el = $(this.template({ words: items }));
       view.$modal = this.$el.filter('#video-modal');
       view.$iframe = this.$modal.find('iframe');
 
