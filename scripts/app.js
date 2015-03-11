@@ -15,9 +15,22 @@
   ];
 
   var Root = Backbone.View.extend({
-    template: '<h1 style="text-align: center;"><a href="#school">Välkommen</a></h1>',
+    template: document.getElementById('view-root').innerText,
     render: function() {
       this.$el = $(this.template);
+/*
+      var stage = new createjs.Stage(this.$el.filter('canvas').get(0));
+
+      var building = new createjs.Rectangle(0, 0, 400, 250);
+      building.graphics.beginFill("#9f2929");
+      stage.addChild(building);
+
+      var door = new createjs.Shape();
+      door.graphics.beginFill("#441817").rect(building.w / 2 - 60, building.h - 150, 120, 150);
+      stage.addChild(door);
+
+      stage.update();
+*/
       return this;
     }
   });
@@ -56,9 +69,11 @@
       });
       view.$modal.on('show.bs.modal', function () {
       });
+
       view.$modal.on('hide.bs.modal', function () {
         view.$iframe.attr('src', '');
       });
+
     }
   });
 
