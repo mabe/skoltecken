@@ -63,7 +63,7 @@
             width = 600;
           }
 
-        view.$iframe.attr('src', 'http://www.youtube.com/embed/' + $(this).data('youtube') + '?rel=0');
+        view.$iframe.get(0).contentWindow.location.replace('http://www.youtube.com/embed/' + $(this).data('youtube') + '?rel=0');
         view.$iframe.attr('height', width * aspectRatio);
         view.$iframe.attr('width', width);
       });
@@ -71,7 +71,7 @@
       });
 
       view.$modal.on('hide.bs.modal', function () {
-        view.$iframe.attr('src', '');
+        view.$iframe.get(0).contentWindow.location.replace('');
       });
 
     }
